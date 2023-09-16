@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SA_YeniUrunEKle">
+
+    <TextView
+        android:id="@+id/SA_txt_baslik"
+        android:layout_width="235dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="6dp"
+        android:text="Mobilya Ürün Oluşturma"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SA_etxt_ekle_isim"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="Ürün ismini giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/SA_etxt_ekle_fiyat"
+        app:layout_constraintEnd_toEndOf="@+id/SA_etxt_ekle_fiyat"
+        app:layout_constraintStart_toStartOf="@+id/SA_etxt_ekle_fiyat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SA_etxt_ekle_fiyat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="23dp"
+        android:ems="10"
+        android:hint="Ürün fiyatı giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/SA_etxt_ekle_aciklama"
+        app:layout_constraintEnd_toEndOf="@+id/SA_etxt_ekle_aciklama"
+        app:layout_constraintStart_toStartOf="@+id/SA_etxt_ekle_aciklama"
+        app:layout_constraintTop_toBottomOf="@+id/SA_etxt_ekle_isim" />
+
+    <EditText
+        android:id="@+id/SA_etxt_ekle_aciklama"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Açıklama giriniz"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/SA_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/SA_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SA_etxt_ekle_fiyat" />
+
+    <Spinner
+        android:id="@+id/SA_spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SA_etxt_ekle_aciklama" />
+
+    <Button
+        android:id="@+id/SA_btn_ekle_urungir"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="17dp"
+        android:text="Ürün Tanımla"
+        app:layout_constraintBottom_toTopOf="@+id/SA_btn_anasayfa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SA_iv_ekle_urunfoto"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/SA_btn_anasayfa"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:text="ANASAYFA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/SA_btn_ekle_urungir"
+        app:layout_constraintStart_toStartOf="@+id/SA_btn_ekle_urungir"
+        app:layout_constraintTop_toBottomOf="@+id/SA_btn_ekle_urungir" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/SA_btn_ekle_urungir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SA_spinner">
+
+        <TextView
+            android:id="@+id/SA_txt_renk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ürün Rengi: "
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="277dp" />
+
+        <RadioGroup
+            android:id="@+id/SA_radyogrup_renk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="305dp">
+
+            <RadioButton
+                android:id="@+id/SA_radyo_mavi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mavi" />
+
+            <RadioButton
+                android:id="@+id/SA_radyo_siyah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Siyah" />
+
+            <RadioButton
+                android:id="@+id/SA_radyo_beyaz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beyaz" />
+
+            <RadioButton
+                android:id="@+id/SA_radyo_kirmizi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kırmızı" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/SA_txt_sehir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Satılacağı Şehir: "
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/SA_checkBox_ankara"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ankara"
+                tools:layout_editor_absoluteX="122dp"
+                tools:layout_editor_absoluteY="404dp" />
+
+            <CheckBox
+                android:id="@+id/SA_checkBox_tokat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Tokat"
+                tools:layout_editor_absoluteX="213dp"
+                tools:layout_editor_absoluteY="404dp" />
+
+            <CheckBox
+                android:id="@+id/SA_checkBox_istanbul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="İstanbul"
+                tools:layout_editor_absoluteX="23dp"
+                tools:layout_editor_absoluteY="404dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/SA_iv_ekle_urunfoto"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/SA_btn_ekle_urungir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

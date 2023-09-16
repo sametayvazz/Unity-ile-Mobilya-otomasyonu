@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1028630105945",
+    "project_id": "mobilyaotomasyon-8dc37",
+    "storage_bucket": "mobilyaotomasyon-8dc37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028630105945:android:e110b4860050ec47734648",
+        "android_client_info": {
+          "package_name": "com.example.mobilyaotomasyon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028630105945-qtq44hru4ou29fhbfarbr6pgd94h0dqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlQdkBh2I81YB6ZSwCjzHFZf4d3AoM0E0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1028630105945-qtq44hru4ou29fhbfarbr6pgd94h0dqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
